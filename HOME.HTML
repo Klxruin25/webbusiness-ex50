@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Expense Report - Trần Khánh Linh</title>
+    <style>
+        body {
+            background-color: #ccffff;
+            font-family: TIMES NEW ROMAN, serif;
+        }
+
+        .container {
+            width: 700px;
+            margin: 20px auto;
+            background-color: #ccffff;
+            border: 2px solid #cccccc;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 1.5px solid #721a1abc;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, td, th {
+            border: 2px solid #e8d7d7;
+            padding: 5px;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        .header-img {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .header-img img {
+            width: 300px;
+        }
+
+
+        button {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .note {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        function submitForm() {
+            alert("Travel expenses submitted successfully!");
+        }
+
+        function resetForm() {
+            document.getElementById("expenseForm").reset();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-img">
+            <img src="DeLong.jpg" alt="DeLong Enterprises Logo">
+        </div>
+
+        <h2>Travel Expense Report</h2>
+
+        <form id="expenseForm">
+            <p>1) First Name: <input type="text" name="firstName" size="15"> 
+            Last Name: <input type="text" name="lastName" size="15"></p>
+
+            <p>2) Social Security Number: <input type="text" name="ssn" size="15"></p>
+
+            <p>3) Department: 
+                <select name="department">
+                    <option>Accounting</option>
+                    <option>Marketing</option>
+                    <option>Sales</option>
+                    <option>Human Resources</option>
+                </select>
+            </p>
+
+            <p>4) Describe the purpose of your trip.</p>
+            <textarea name="tripPurpose" rows="4" cols="60"></textarea>
+
+            <p>5) Itemize your travel expenses</p>
+
+            
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Lodging</option>
+                            <option>Transport</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Lodging</option>
+                            <option>Transport</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Lodging</option>
+                            <option>Transport</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Lodging</option>
+                            <option>Transport</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+
+            <p>6) Have you submitted your receipts?
+                <input type="radio" name="receipt" value="yes"> Yes
+                <input type="radio" name="receipt" value="no"> No
+            </p>
+
+            <button type="button" onclick="submitForm()">Submit travel expenses</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </form>
+
+        <div class="note">
+            Questions? Contact Debbie Larson in Accounting (ext. 2150).
+        </div>
+    </div>
+</body>
+</html>
